@@ -31,11 +31,11 @@ app.use("/api/users", userRoutes);
 app.use("/api/games", gameRoutes);
 app.use('/api/scores', scoreRoutes);
 
-app.use(express.static(path.join(__dirname, "/frontend/dist")));
-
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
-});
+// app.use(express.static(path.join(__dirname, "/frontend/dist")));
+//
+// app.get("*", (req, res) => {
+//     res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
+// });
 
 // Connect to the database and start the server
 server.listen(PORT, () => {

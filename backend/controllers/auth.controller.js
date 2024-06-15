@@ -4,10 +4,12 @@ import generateToken from "../helpers/generateToken.js";
 
 export const signup = async (req, res) => {
     try {
-        // Modified variable names for better readability
-        const { fullName, username, password, confirmPassword, gender } = req.body;
+        const { fullName, username, email, password, confirmPassword, gender } = req.body;
 
-        if (!fullName || !username || !password || !confirmPassword || !gender) {
+        // Log the request body to confirm all fields are present
+        console.log('Signup request body:', req.body);
+
+        if (!fullName || !username || !email || !password || !confirmPassword || !gender) {
             return res.status(400).json({ error: "All fields are required" });
         }
 
@@ -30,6 +32,7 @@ export const signup = async (req, res) => {
         const newUser = new User({
             fullName,
             username,
+            email,  // Ensure email is included here
             password: hashedPassword,
             gender,
             profilePicture: gender === "male" ? boyProfilePic : girlProfilePic,
@@ -43,6 +46,7 @@ export const signup = async (req, res) => {
             _id: newUser._id,
             fullName: newUser.fullName,
             username: newUser.username,
+            email: newUser.email,  // Ensure email is included here
             profilePicture: newUser.profilePicture,
         });
     } catch (error) {
