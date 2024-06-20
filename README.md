@@ -1,8 +1,8 @@
 for placeholder avatars api : https://avatar-placeholder.iran.liara.run/ 
 
-# GameChat Connect
+# playchat
 
-GameChat Connect is a full-stack web application built with React, MongoDB, Express, Node.js, JWT authentication, Socket.IO, and .NET technologies. It offers users the ability to chat with others, create profiles, and engage in various minigames built with HTML5.
+playchat  is a full-stack web application built with React, MongoDB, Express, Node.js, JWT authentication, Socket.IO, and .NET technologies. It offers users the ability to chat with others, create profiles, and engage in various minigames built with HTML5.
 
 ## Features
 
@@ -28,7 +28,7 @@ GameChat Connect is a full-stack web application built with React, MongoDB, Expr
 
 ## Getting Started
 
-To get started with GameChat Connect, follow these steps:
+To get started with playchat, follow these steps:
 
 1. Clone this repository to your local machine.
 2. Install dependencies using `npm install`.
